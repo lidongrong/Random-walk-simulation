@@ -5,7 +5,7 @@ import numpy as np
 import time
 
 
-def Walk(original_pos,length,num_of_step):
+def Walk(original_pos,length,num_of_step,p=50):
     pos=original_pos
     for i in range(0,num_of_step):
         '''
@@ -14,7 +14,8 @@ def Walk(original_pos,length,num_of_step):
         if x=0, we draw back
         else we move forward
 '''
-        if np.random.randint(0,2): 
+        number=np.random.uniform(0,100)
+        if number>=p: 
   
 
             pos=pos+1
@@ -29,6 +30,8 @@ def Walk(original_pos,length,num_of_step):
        # time.sleep(0.1)
 
     return pos
+
+
 
 
     
